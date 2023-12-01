@@ -1,0 +1,320 @@
+@import url(https://fonts.google.com/specimen/Inter);
+/* Reset margins */
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+	margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-weight: 400;
+}
+
+
+/*=== Declaring variables ===*/
+
+:root{
+    /*== primary colors ==*/
+    --Lime-Green: hsl(163, 72%, 41%);
+    --Bright-Red: hsl(356, 69%, 56%);
+    --Facebook: hsl(208, 92%, 53%);
+    --Twitter: hsl(203, 89%, 53%);
+    --Instagram: linear-gradient (to right hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    --YouTube: hsl(348, 97%, 39%);
+
+    /*== dark theme ==*/
+    --Very-Dark-Blue-BG: hsl(230, 17%, 14%);
+    --Very-Dark-Blue-Top-BG-Pattern: hsl(232, 19%, 15%);
+    --Dark-Desaturated-Blue-Card-BG: hsl(228, 28%, 20%);
+    --Dark-Desaturated-Blue-Card-BG-hover: hsl(229, 24%, 28%);
+    --Desaturated-Blue-Text: hsl(228, 34%, 66%);
+    --White-Text: hsl(0, 0%, 100%);
+
+    --dk-Toggle: linear-gradient to right hsl(210, 78%, 56%), hsl(146, 68%, 55%);
+
+
+    /*== light theme ==*/
+    --White-BG: hsl(0, 0%, 100%);
+    --Very-Pale-Blue-Top-BG-Pattern: hsl(225, 100%, 98%);
+    --Light-Grayish-Blue-Card-BG: hsl(227, 47%, 96%);
+    --Dark-Grayish-Blue-Text: hsl(228, 12%, 44%);
+    --Very-Dark-Blue-Text: hsl(230, 17%, 14%);
+
+    --lt-Toggle: hsl(230, 22%, 74%);
+
+    /*  font family*/
+}
+
+
+
+
+/*======    Main styles     =====*/
+
+.container{
+    background-color: var(--Very-Dark-Blue-BG);
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex   ;
+}
+
+.main-container{
+    width: 80%;
+}
+
+.main-container p {
+    color: var(--Desaturated-Blue-Text);
+}
+
+.main-container-top{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: var(--White-Text);
+    padding: 30px 0px;
+}
+.top-left h1{
+    font-weight: 400;
+    font-size: 28px;
+}
+.top-right{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-right: 25px;
+}
+
+p{
+    font-size: 14px;
+}
+
+.toggle-text{
+    text-align: right;
+}
+
+.toggle{
+    background: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    width: 40px;
+    height: 18px;
+    border-radius: 30px;
+    padding: 3px;
+    transition: 0.3s;
+    margin-left: 10px;
+}
+.toggle-btn{
+    background: var(--Dark-Desaturated-Blue-Card-BG);
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.toggle.active{
+    background-color: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    
+    margin-left: 10px;
+}
+
+.toggle.active .toggle-btn{
+    margin-left: 55%;
+}
+
+/*======    section styles     =====*/
+
+.main-container-follow{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+
+.follow-child{
+    background-color: var(--Dark-Desaturated-Blue-Card-BG);
+    padding: 20px 0px;
+    border-radius: 5px;
+    margin: 0px 25px 30px 0px;
+}
+.follow-child:hover{
+    background-color: var(--Dark-Desaturated-Blue-Card-BG-hover);
+    padding: 20px 0px;
+    border-radius: 5px;
+    margin: 0px 25px 30px 0px;
+    cursor: pointer;
+}
+
+
+
+
+
+.main-container-over{
+    color: var(--White-Text);
+    padding-bottom: 20px;
+    font-size: 15px;
+}
+
+
+
+.main-container-info{ 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.main-info-child{
+    background-color: var(--Dark-Desaturated-Blue-Card-BG);
+    border-radius: 5px;
+    padding: 25px;
+    margin: 0px 25px 25px 0px;
+}
+.main-info-child:hover{
+    background-color: var(--Dark-Desaturated-Blue-Card-BG-hover);
+    border-radius: 5px;
+    padding: 25px;
+    margin: 0px 25px 25px 0px;
+    cursor: pointer;
+}
+
+.info-child{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+}
+
+.infchild{
+    padding-bottom: 20px;
+}
+
+.child{
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+
+.child img{
+    margin-right: 10px;
+}
+
+/*======    utilities styles     =====*/
+
+
+.follow-child h3{
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--White-Text);
+}
+.full-scribe p{
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 3px;
+    padding-bottom: 15px;
+}
+.first-flexy{
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+.flexy{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-top: 10px;
+}
+
+
+.first-flexy p, .flexy p{
+    text-align: left;
+    font-size: 11px;
+    padding-top: 5px;
+    color: var(--Lime-Green);
+}
+
+.first-flexy img, .flexy img{
+    padding-right: 5px;
+}
+
+.info-child h4{
+    font-size: 30px;
+    color: var(--White-Text);
+    font-weight: 600;
+}
+.flot{
+    text-align: right;
+}
+.facebook{
+    border-top: 4px solid var(--Facebook);
+}
+.twitter{
+    border-top: 4px solid var(--Twitter);
+}
+.instagram{
+    border-top: 4px solid transparent;
+    border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    border-image-slice: 1;
+}
+.youtube{
+    border-top: 4px solid var(--YouTube);
+}
+.red p{
+    color: var(--Bright-Red);
+}
+
+
+@media (max-width: 375px){
+    .container{
+        padding: 0px 0px 30px 0px;
+    }
+    .main-container{
+        width: 100%;
+    }
+    .main-container-top{
+        display: grid;
+        grid-template-columns: repeat(1, 2fr);
+        color: var(--White-Text);
+        padding: 30px 0px;
+        margin-left: 20px;
+    }
+    .main-container-over{
+        margin: 20px 20px 0px 20px;
+    }
+    .top-right{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 20px;
+    }
+    .toggle{
+        margin-left: 140px;
+    }
+    .toggle.active{
+        margin-left: 140px;
+    }
+    .main-container-follow{
+        display: grid;
+        grid-template-columns: repeat(1, 4fr);
+    }
+    .follow-child{
+        margin: 20px;
+    }
+    .main-container-info{
+        display: grid;
+        grid-template-columns: repeat(1, 4fr);
+    }
+    .main-info-child{
+        margin: 20px 20px 0px 20px;
+    }
+}
+
